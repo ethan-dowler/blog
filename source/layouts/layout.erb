@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <%= partial 'layouts/slices/ga' %>
+    <%= partial 'layouts/slices/ga' unless config[:disable_ga] %>
 
     <meta charset="utf-8">
     <meta name="viewport"

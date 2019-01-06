@@ -6,6 +6,14 @@ end
 
 set :build_dir, 'build/ethan-dowler.github.io'
 
+configure :development do
+  config[:disable_ga] = true
+end
+
+configure :build do
+  config[:disable_ga] = false
+end
+
 require "sprockets/es6"
 activate :sprockets do |s|
   s.supported_output_extensions << ".es6"
