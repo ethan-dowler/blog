@@ -1,4 +1,6 @@
 ;(function() {
+  'use strict'
+
   const open = 'menu-open',
     dataToggle = '[data-toggle-menu]',
     navClass = '.Nav'
