@@ -1,0 +1,18 @@
+@import '../shared';
+
+.Header {
+  display: flex;
+  justify-content: right;
+
+  &-buttonContainer {
+    @include scut-padding(cubits(1) cubits(0.5));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-button {
+    @include scut-margin(n cubits(1));
+    cursor: pointer;
+  }
+}

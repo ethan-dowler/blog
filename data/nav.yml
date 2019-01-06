@@ -1,0 +1,15 @@
+items:
+  -
+    text: Home
+    url: /
+  -
+    text: Blog
+    url: /blog
+    items:
+      -
+        text: Games
+        url: /games
+        items:
+          -
+            text: Keyforge
+            url: /keyforge

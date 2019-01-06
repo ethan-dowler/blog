@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'layouts/slices/ga' %>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= partial 'layouts/slices/icons' %>
+    <%= partial 'layouts/slices/open_graph' %>
+
+    <title>Ethan Dowler</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
+    <%= stylesheet_link_tag "site" %>
+    <%= yield_content(:head_assets) if content_for?(:head_assets) %>
+  </head>
+  <body>
+    <%# hidden until the user clicks the menu button %>
+    <%= partial 'layouts/slices/nav' %>
+
+    <%= partial 'layouts/slices/header' %>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <%= partial 'layouts/slices/footer' %>
+
+    <%= javascript_include_tag "site" %>
+    <%= yield_content(:body_assets) if content_for?(:body_assets) %>
+    <%= evil_icons_sprite %>
+  </body>
+</html>

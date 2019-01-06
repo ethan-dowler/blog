@@ -1,0 +1,56 @@
+@import '../shared';
+
+.Nav {
+  @include scut-padding(cubits(5) cubits(1) n);
+  @include scut-fixed(0 n 0 (-$width--nav));
+  @include scut-size($width--nav 100vh);
+  z-index: 100;
+  background: $color--bright-gray;
+  border: 2px solid $color--light-gray;
+  border-left-color: transparent;
+  border-radius: 0.25rem 0 0 0.25rem;
+  transition: left 0.5s;
+
+  .menu-open & {
+    left: 0;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-item {
+    @include scut-margin(n n cubits(2));
+    @include scut-padding(cubits(0.5));
+    width: 100%;
+  }
+
+  &-button {
+    color: $color--dark-gray;
+    background-color: $color--white;
+    border: 2px solid $color--light-gray;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color--white;
+      background-color: $color--dark-gray;
+    }
+  }
+
+  &-x {
+    @include scut-absolute(0 n n 0);
+
+    .icon {
+      cursor: pointer;
+      fill: $color--primary;
+
+      &:hover {
+        fill: $color--primary-hover;
+      }
+    }
+  }
+}
