@@ -1,8 +1,7 @@
 @import '../shared';
 
 .Header {
-  display: flex;
-  justify-content: right;
+  border-bottom: 2px solid black;
 
   &-buttonContainer {
     @include scut-padding(cubits(1) cubits(0.5));
@@ -13,6 +12,14 @@
 
   &-button {
     @include scut-margin(n cubits(1));
-    cursor: pointer;
+  }
+
+  &-title {
+    @include scut-padding(cubits(1) cubits(0.5));
+    @include font(m, bold);
+    color: $color--primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

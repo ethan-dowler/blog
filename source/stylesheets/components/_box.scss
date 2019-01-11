@@ -1,0 +1,7 @@
+.Box {
+  @include scut-center-block($width--site);
+
+  &--content {
+    max-width: $width--content;
+  }
+}

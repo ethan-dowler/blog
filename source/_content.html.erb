@@ -1,0 +1,14 @@
+<% copy ||= {} %>
+<div class='Box Box--content'>
+  <% copy[:items].each do |item| %>
+    <% if item[:body] %>
+      <p>
+        <% if item[:title] %>
+          <span class='bold underline small'><%= item[:title] %></span><br/>
+        <% end %>
+
+        <%= item[:body] %>
+      </p>
+    <% end %>
+  <% end if copy[:items] %>
+</div>

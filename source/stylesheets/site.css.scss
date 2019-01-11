@@ -3,6 +3,7 @@
 @import 'shared';
 @import 'normalize';
 @include scut-reset-border-box;
+@include scut-reset-semanticize;
+@include scut-reset-button;
 @import 'global';
 @import 'components/index';
-@import 'home/index';

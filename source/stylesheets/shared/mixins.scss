@@ -1,38 +1,29 @@
-// Page Components
-@mixin Slice {
-  @include scut-padding(cubits(4) cubits(2));
+// A common, "biblical" unit of measurement
+@function cubits($number) {
+  @return $cubit * $number;
 }
-@mixin Slice-title {
-  @include scut-margin(n n cubits(2));
-  @include font(m, bold);
 
-  @include breakpoint(lap) {
-    @include font(l);
+// Utility
+@mixin breakpoint($point) {
+  @if $point == desk {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  } @else if $point == lap {
+    @media (min-width: 56.25rem) {
+      @content;
+    }
+  } @else if $point == hands {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == palm {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } @else {
+    @error "#{$point} is not a valid breakpoint";
   }
-}
-@mixin Slice-body {
-  @include scut-center-block($width--content);
-  @include font(s);
-}
-@mixin Hero {
-  @include scut-padding(12rem 2rem);
-  color: $color--white;
-}
-@mixin Hero-title {
-  @include Slice-title;
-}
-@mixin Hero-body {
-  @include scut-center-block($width--content);
-  @include font(s);
-
-  @include breakpoint(lap) {
-    @include font(m);
-  }
-}
-@mixin bubble {
-  @include scut-padding(cubits(1));
-  background-color: $color--white;
-  border-radius: $border-radius;
 }
 
 // Typography
@@ -62,30 +53,4 @@
 }
 @mixin underline {
   text-decoration: underline;
-}
-
-// Utility
-@mixin breakpoint($point) {
-  @if $point == desk {
-    @media (min-width: 75rem) {
-      @content;
-    }
-  } @else if $point == lap {
-    @media (min-width: 56.25rem) {
-      @content;
-    }
-  } @else if $point == hands {
-    @media (min-width: 37.5em) {
-      @content;
-    }
-  } @else if $point == palm {
-    @media (max-width: 37.5em) {
-      @content;
-    }
-  } @else {
-    @error "#{$point} is not a valid breakpoint";
-  }
-}
-@function cubits($number) {
-  @return $cubit * $number;
 }

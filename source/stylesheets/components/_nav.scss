@@ -1,7 +1,7 @@
 @import '../shared';
 
 .Nav {
-  @include scut-padding(cubits(5) cubits(1) n);
+  @include scut-padding(cubits(6) cubits(1) n);
   @include scut-fixed(0 n 0 (-$width--nav));
   @include scut-size($width--nav 100vh);
   z-index: 100;

@@ -38,28 +38,7 @@
     }
   }
 
-  &--inverse {
-    background-color: $color--white;
-    border-color: $color--white;
-    color: $color--primary;
-
-    &:hover {
-      color: $color--white;
-      background-color: $color--primary;
-      border-color: $color--white;
-    }
-
-    &.Button--primary {
-      color: $color--primary;
-
-      &:hover {
-        color: $color--white;
-        background-color: $color--primary;
-        border-color: $color--white;
-      }
-    }
-  }
-
+  /* black "bones" and "hollow" white background; looks like a skeleton */
   &--skeleton {
     background-color: $color--white;
     border-color: $color--dark-gray;
@@ -67,19 +46,7 @@
 
     &:hover {
       background-color: $color--dark-gray;
-      color: $color--white;
       border-color: $color--dark-gray;
-    }
-  }
-
-  &--gray {
-    background-color: $color--light-gray;
-    border-color: $color--light-gray;
-    color: $color--white;
-
-    &:hover {
-      background-color: $color--bright-gray;
-      border-color: $color--bright-gray;
       color: $color--white;
     }
   }
