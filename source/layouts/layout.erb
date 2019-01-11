@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
   <head>
-    <%= partial 'layouts/slices/ga' unless config[:disable_ga] %>
+    <%= partial 'layouts/components/ga' unless config[:disable_ga] %>
 
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= partial 'layouts/slices/icons' %>
-    <%= partial 'layouts/slices/open_graph' %>
+    <%= partial 'layouts/components/icons' %>
+    <%= partial 'layouts/components/open_graph' %>
 
     <title>Ethan Dowler</title>
 
@@ -18,15 +18,15 @@
   </head>
   <body>
     <%# hidden until the user clicks the menu button %>
-    <%= partial 'layouts/slices/nav' %>
+    <%= partial 'layouts/components/nav' %>
 
-    <%= partial 'layouts/slices/header' %>
+    <%= partial 'layouts/components/header' %>
 
     <main>
       <%= yield %>
     </main>
 
-    <%= partial 'layouts/slices/footer' %>
+    <%= partial 'layouts/components/footer' %>
 
     <%= javascript_include_tag "site" %>
     <%= yield_content(:body_assets) if content_for?(:body_assets) %>
