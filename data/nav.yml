@@ -7,9 +7,5 @@ items:
     url: /blog
     items:
       -
-        text: Games
-        url: /games
-        items:
-          -
-            text: Keyforge
-            url: /keyforge
+        text: Keyforge
+        url: /keyforge
