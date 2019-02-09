@@ -4,6 +4,7 @@ $padding--top-bottom--hands: cubits(4);
 
 section {
   @include scut-padding($padding--top-bottom $padding--side);
+  @include font(s);
 
   @include breakpoint(hands) {
     @include scut-padding($padding--top-bottom--hands n);

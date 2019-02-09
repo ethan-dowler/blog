@@ -4,4 +4,11 @@
   &--content {
     max-width: $width--content;
   }
+
+  &-footer {
+    @include scut-margin(cubits(2) n n);
+    @include font(xs);
+    // background-color: $color--bright-gray;
+    border-radius: $border-radius;
+  }
 }

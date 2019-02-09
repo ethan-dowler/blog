@@ -6,14 +6,15 @@ a {
   text-decoration: none;
 
   &.inline-link {
-    color: $color--secondary;
+    @include bold;
+    color: $color--primary;
 
     &:visited {
-      color: $color--secondary;
+      color: $color--primary;
     }
 
     &:hover {
-      color: $color--secondary-hover;
+      color: $color--primary-hover;
       text-decoration: underline;
     }
 
