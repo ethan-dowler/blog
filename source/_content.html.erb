@@ -14,9 +14,13 @@
     </p>
   <% end if copy[:items] %>
 
-  <% if copy[:footer] %>
+  <% if copy[:footnotes] %>
     <div class='Box-footer'>
-      <% copy[:footer] %>
+      <% copy[:footnotes].each do |note| %>
+        <p>
+          <i><%= note %></i>
+        </p>
+      <% end %>
     </div>
   <% end %>
 </div>
