@@ -1,1 +1,10 @@
-<%= partial :article, locals: { copy: data.blog.blog } %>
+<section>
+  <h1>
+    Articles
+  </h1>
+
+  <% data.blog.articles.each do |name| %>
+    <% slug = name.downcase.gsub(' ', '-') %>
+    <%= link_to name, "/blog/#{slug}", class: 'inline-link' %>
+  <% end %>
+</section>
