@@ -9,7 +9,7 @@
   border: 2px solid $color--light-gray;
   border-left-color: transparent;
   border-radius: 0.25rem 0 0 0.25rem;
-  transition: left 0.5s;
+  transition: left 0.25s;
 
   .menu-open & {
     left: 0;
