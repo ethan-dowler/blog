@@ -1,8 +1,8 @@
 {
-  "name": "cbc-spring-hill",
+  "name": "ethan-dowler",
   "version": "1.0.0",
-  "description": "Source Code for Community Baptist Church Spring Hill site",
-  "repository": "git@github.com:ethan-dowler/cbc-spring-hill.git",
+  "description": "Source Code for Ethan Dowler's personal site",
+  "repository": "git@github.com:ethan-dowler/ethan-dowler.git",
   "author": "ethan-dowler <Ethan.dowler@daveramsey.com>",
   "devDependencies": {
     "husky": "^1.1.2",
