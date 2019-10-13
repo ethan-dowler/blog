@@ -1,15 +1,20 @@
 <div class='Box Box--content'>
   <% copy[:items].each do |item| %>
-    <p>
       <% if item.is_a?(String) %>
-        <%= item %>
-      <% else %>
-        <% if item[:title] %>
-          <span class='bold underline small'><%= item[:title] %></span>
-          <br/>
-        <% end %>
+        <p>
+          <%= item %>
+        </p>
+      <% elsif item.key?(:title) %>
+        <p>
+          <% if item[:title] %>
+            <span class='bold underline small'><%= item[:title] %></span>
+            <br/>
+          <% end %>
 
-        <%= item[:body] %>
+          <%= item[:body] %>
+        </p>
+      <% elsif item.key?(:href) %>
+        <%= partial :link_button, locals: { text: item[:text], href: item[:href] } %>
       <% end %>
     </p>
   <% end if copy[:items] %>
