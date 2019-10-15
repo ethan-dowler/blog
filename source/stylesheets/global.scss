@@ -41,6 +41,12 @@ body {
 .small {
   @include font(s);
 }
+.medium {
+  @include font(m);
+}
 .underline {
   @include underline;
+}
+.left-align {
+  text-align: left;
 }
