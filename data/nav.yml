@@ -5,7 +5,3 @@ items:
   -
     text: Blog
     url: /blog
-    items:
-      -
-        text: Keyforge
-        url: /keyforge
