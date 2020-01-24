@@ -100,7 +100,7 @@ GEM
     public_suffix (3.0.3)
     rack (2.0.6)
     rainbow (3.0.0)
-    rake (12.3.2)
+    rake (13.0.1)
     ramsey_cop (0.13.0)
       rubocop (~> 0)
     rb-fsevent (0.10.3)
@@ -148,4 +148,4 @@ DEPENDENCIES
   sprockets-es6
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
