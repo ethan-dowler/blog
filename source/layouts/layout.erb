@@ -4,17 +4,25 @@
     <%= partial 'layouts/components/ga' unless config[:disable_ga] %>
 
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= partial 'layouts/components/icons' %>
     <%= partial 'layouts/components/open_graph' %>
 
+    <%# TODO: make title dynamic based on frontmatter %>
     <title>Ethan Dowler</title>
+
+    <%# Open Graph Meta - https://ogp.me %>
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:description" content="A place for Ethan to write down things that he thinks might help people" />
+
+    <meta property="og:image" content="/images/open_graph_image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Ethan's Blog" />
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
     <%= stylesheet_link_tag "site" %>
-    <%= yield_content(:head_assets) if content_for?(:head_assets) %>
   </head>
   <body>
     <%# hidden until the user clicks the menu button %>
@@ -29,7 +37,6 @@
     <%= partial 'layouts/components/footer' %>
 
     <%= javascript_include_tag "site" %>
-    <%= yield_content(:body_assets) if content_for?(:body_assets) %>
     <%= evil_icons_sprite %>
   </body>
 </html>
