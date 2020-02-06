@@ -1,8 +1,7 @@
 categories:
-  # - name: parenting
-  #   articles:
-  # TODO: write this article
-  #     - What God Is Teaching Me Through My Kids
   - name: marriage
     articles:
       - The True Cost of Marriage
+  - name: parenting
+    articles:
+      - What God Teaches Us About Parenting
