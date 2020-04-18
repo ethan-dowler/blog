@@ -5,7 +5,7 @@ activate :autoprefixer do |prefix|
 end
 
 # set the local build path to the root of the Github Pages repo
-set :build_dir, 'build/ethan-dowler.github.io'
+set :build_dir, 'build'
 
 configure :development do
   # turn off Google Analytics while in development mode.
