@@ -3,6 +3,7 @@ $padding--top-bottom: cubits(2);
 $padding--top-bottom--hands: cubits(4);
 
 section {
+  @include scut-center-block(75rem);
   @include scut-padding($padding--top-bottom $padding--side);
   @include font(s);
 
