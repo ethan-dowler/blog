@@ -8,12 +8,13 @@ end
 set :build_dir, 'build'
 
 configure :development do
-  # turn off Google Analytics while in development mode.
+  config[:site_url] = "http://localhost:4567/"
   config[:disable_ga] = true
   config[:root_path] = "/"
 end
 
 configure :build do
+  config[:site_url] = "https://ethan-dowler.github.io/blog/"
   config[:disable_ga] = false
   config[:root_path] = "/blog/"
 end
