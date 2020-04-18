@@ -7,3 +7,10 @@ build/
 node_modules
 yarn-error.log
 tmp
+
+stylesheets
+*.css
+!site.css
+
+*.js
+!site.js
