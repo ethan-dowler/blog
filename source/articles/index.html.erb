@@ -12,7 +12,7 @@
       <% category.articles.each do |article| %>
         <% slug = article.downcase.gsub(' ', '-') %>
         <p>
-          <%= link_to article, "/blog/#{category.name}/#{slug}", class: 'inline-link' %>
+          <%= link_to article, "#{config.root_path}articles/#{category.name}/#{slug}", class: 'inline-link' %>
         </p>
       <% end %>
     <% end %>

@@ -10,10 +10,12 @@ set :build_dir, 'build'
 configure :development do
   # turn off Google Analytics while in development mode.
   config[:disable_ga] = true
+  config[:root_path] = "/"
 end
 
 configure :build do
   config[:disable_ga] = false
+  config[:root_path] = "/blog/"
 end
 
 require "sprockets/es6"

@@ -14,7 +14,7 @@
           <%= item[:body] %>
         </p>
       <% elsif item.key?(:href) %>
-        <%= partial :link_button, locals: { text: item[:text], href: item[:href] } %>
+        <%= partial :link_button, locals: { text: item[:text], href: "#{config.root_path}#{item[:href]}" } %>
       <% end %>
     </p>
   <% end if copy[:items] %>
